@@ -506,14 +506,14 @@ bool buttonLeftPressed()
       {
         while(digitalRead(ButtonLeft))
         {
-          Serial.print("buttonLeftPressed()");
+          //Serial.print("buttonLeftPressed()");
           return true;
         }
       }
     }
     delay(buttonDelay);
     backCounter = 0;
-    Serial.print("buttonLeftPressed()");
+    //Serial.print("buttonLeftPressed()");
     return true;
   }
   else
@@ -541,14 +541,14 @@ bool buttonRightPressed()
       {
         while(digitalRead(ButtonRight))
         {
-        Serial.print("buttonRightPressed()");
+        //Serial.print("buttonRightPressed()");
           return true;
         }
       }
     }
     delay(buttonDelay);
     backCounter = 0;
-    Serial.print("buttonRightPressed()");
+    //Serial.print("buttonRightPressed()");
     return true;
   }
   else
@@ -566,7 +566,7 @@ bool buttonMenuRightPressed()
     while(digitalRead(ButtonMenuRight));
     delay(buttonDelay);
     backCounter = 0;
-    Serial.print("buttonMenuRightPressed()");
+    //Serial.print("buttonMenuRightPressed()");
     return true;
   }
   else
@@ -581,7 +581,7 @@ bool buttonMenuLeftPressed()
     while(digitalRead(ButtonMenuLeft));
     delay(buttonDelay);
     backCounter = 0;
-    Serial.println("buttonMenuLeftPressed()");
+    //Serial.println("buttonMenuLeftPressed()");
     return true;
   }
   else
@@ -1402,18 +1402,18 @@ void limitResistancesToDegrees()
   aziMinDeg = 180 - ((aziRes180-minAziResistance)/oneDegAzi);
   aziMaxDeg = 180 + ((maxAziResistance - aziRes180)/oneDegAzi);
   
-  Serial.print(oneDegElev);
-  Serial.print("\t");
-  Serial.print(oneDegAzi);
-  Serial.print("\t");
-  Serial.print(elevMinDeg);
-  Serial.print("\t");
-  Serial.print(elevMaxDeg);
-  Serial.print("\t");
-  Serial.print(aziMinDeg);
-  Serial.print("\t");
-  Serial.print(aziMaxDeg);
-  Serial.print("\t");
+  //Serial.print(oneDegElev);
+  //Serial.print("\t");
+  //Serial.print(oneDegAzi);
+  //Serial.print("\t");
+  //Serial.print(elevMinDeg);
+  //Serial.print("\t");
+  //Serial.print(elevMaxDeg);
+  //Serial.print("\t");
+  //Serial.print(aziMinDeg);
+  //Serial.print("\t");
+  //Serial.print(aziMaxDeg);
+  //Serial.print("\t");
 }
 //
 //------------------------ Calculate resistance as degrees ----------------------
@@ -2159,9 +2159,9 @@ void checkDayChange()
 void setupAccessPoint() {
 
   WiFi.softAP(ap_ssid, ap_password);
-  Serial.println("Access Point Created");
-  Serial.print("IP Address: ");
-  Serial.println(WiFi.softAPIP());
+  //Serial.println("Access Point Created");
+  //Serial.print("IP Address: ");
+  //Serial.println(WiFi.softAPIP());
 
   server.on("/", HTTP_GET, []() {
     String html = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>ESP32 Setup</title>";
@@ -2323,9 +2323,9 @@ void clearUpdatedByAppOnServer() {
 
   if (httpResponseCode > 0) {
     String response = http.getString();
-    Serial.println(response);
+    //Serial.println(response);
   } else {
-    Serial.println("Error on sending POST: " + String(httpResponseCode));
+    //Serial.println("Error on sending POST: " + String(httpResponseCode));
   }
   http.end();
 }
@@ -2342,9 +2342,9 @@ void clearDateUpdatedOnServer() {
 
   if (httpResponseCode > 0) {
     String response = http.getString();
-    Serial.println(response);
+    //Serial.println(response);
   } else {
-    Serial.println("Error on sending POST: " + String(httpResponseCode));
+    //Serial.println("Error on sending POST: " + String(httpResponseCode));
   }
   http.end();
 }
@@ -2355,7 +2355,7 @@ void updateLocalVariables(String json) {
   StaticJsonDocument<1024> doc;
   DeserializationError error = deserializeJson(doc, json);
   if (error) {
-    Serial.println("Failed to parse JSON");
+    //Serial.println("Failed to parse JSON");
     return;
   }
 
@@ -2384,7 +2384,7 @@ void updateLocalVariables(String json) {
     dataUpdated = true;
   else
     dataUpdated = false;
-  Serial.println(doc["date_updated"].as<int>());
+  //Serial.println(doc["date_updated"].as<int>());
 
   if (dataUpdated)
   {
@@ -2431,17 +2431,17 @@ void reconnectWiFi() {
   WiFi.disconnect();
   WiFi.begin(wifiSSID.c_str(), wifiPassword.c_str());
   int attempts = 0;
-  Serial.print("WL_CONNECTED..");
+  //Serial.print("WL_CONNECTED..");
   while (WiFi.status() != WL_CONNECTED && attempts < 10) {
     delay(1000);
-    Serial.print(".");
+    //Serial.print(".");
   }
   
   if (WiFi.status() == WL_CONNECTED) {
     newWifiStatus = Connected;
-    Serial.println("Reconnected to WiFi");
+    //Serial.println("Reconnected to WiFi");
   } else {
-    Serial.println("Failed to reconnect to WiFi");
+    //Serial.println("Failed to reconnect to WiFi");
   }
 }
 
@@ -2928,22 +2928,3 @@ void loop() {
 }
 //
 //################################ END LOOP ###############################
-
-void scanModbusIDs() {
-  uint8_t result;
-  
-  for (uint8_t modbusID = 1; modbusID <= 255; modbusID++) {
-    node.begin(modbusID, Serial2);
-    
-    // Battery Capacity
-    result = node.readHoldingRegisters(0x100, 1);
-    
-    if (result == node.ku8MBSuccess) {
-      Serial.print("Found device at Modbus ID: ");
-      Serial.println(modbusID);
-    } else {
-      Serial.print("No response from Modbus ID: ");
-      Serial.println(modbusID);
-    }
-  }
-}
