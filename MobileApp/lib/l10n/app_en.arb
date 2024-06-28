@@ -1,0 +1,64 @@
+{
+  "@@locale": "en",
+  "appTitle": "PV Solar Tracker",
+  "selectDate": "Select date",
+  "selectTime": "Select time",
+  "dateAndTime": "Date and Time",
+  "coordinates": "Coordinates",
+  "longitude": "Longitude",
+  "latitude": "Latitude",
+  "degrees": "Degrees",
+  "minutes": "Minutes",
+  "azimuth": "Azimuth",
+  "zenith": "Zenith",
+  "elevation": "Elevation",
+  "sunPosition": "Sun Position",
+  "azimuthAndElevation": "Azimuth and Elevation",
+  "manualMode": "Manual Mode",
+  "azimuthDegrees": "Azimuth (degrees)",
+  "elevationDegrees": "Elevation (degrees)",
+  "selectedDate": "Selected date: {date}",
+  "selectedTime": "Selected time: {time}",
+  "batteryInformation": "Battery Information",
+  "batteryCapacity": "Battery Capacity: {value}%",
+  "batteryVoltage": "Battery Voltage: {value}V",
+  "batteryChargeCurrent": "Battery Charge Current: {value}A",
+  "pvVoltage": "Solar Panel (PV) Voltage: {value}V",
+  "pvPower": "Solar Panel (PV) Power: {value}W",
+  "change": "Change",
+  "dataFetchSuccess": "Data fetched successfully",
+  "dataFetchFailure": "Failed to fetch data",
+  "dataSendSuccess": "Data sent successfully",
+  "dataSendFailure": "Failed to send data",
+  "save": "Save",
+  "targetAzimuth": "Target Azimuth",
+  "targetElevation": "Target Elevation",
+  "settings": "Settings",
+  "changeLanguage": "Language",
+  "timezoneOffset": "Timezone Offset",
+  "sunrise": "Sunrise",
+  "sunset": "Sunset",
+  "generalSettings": "General Settings",
+  "networkSettings": "Network Settings",
+  "serverAddress": "Server Address",
+  "installationNumber": "Installation Number",
+  "actuators": "Actuators",
+  "actuatorFrequency": "Actuator Frequency",
+  "changeActuatorFrequency": "Change Actuator Frequency",
+  "changeCoordinates": "Change Coordinates",
+  "changeAngles": "Change Angles"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

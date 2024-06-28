@@ -1,0 +1,1 @@
+Oto projekt dla Android Studio Flutter

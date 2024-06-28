@@ -1,0 +1,60 @@
+{
+  "@@locale": "pl",
+  "appTitle": "PV Solar Tracker",
+  "selectDate": "Wybierz datę",
+  "selectTime": "Wybierz czas",
+  "dateAndTime": "Data i godzina",
+  "coordinates": "Współrzędne",
+  "longitude": "Długość geograficzna",
+  "latitude": "Szerokość geograficzna",
+  "degrees": "Stopnie",
+  "minutes": "Minuty",
+  "azimuth": "Azymut",
+  "zenith": "Zenit",
+  "elevation": "Elewacja",
+  "sunPosition": "Pozycja Słońca",
+  "azimuthAndElevation": "Azymut i Elewacja",
+  "manualMode": "Tryb ręczny",
+  "azimuthDegrees": "Azymut (stopnie)",
+  "elevationDegrees": "Elewacja (stopnie)",
+  "selectedDate": "Wybrana data: {date}",
+  "selectedTime": "Wybrany czas: {time}",
+  "batteryInformation": "Informacje o baterii",
+  "batteryCapacity": "Pojemność baterii: {value}%",
+  "batteryVoltage": "Napięcie baterii: {value}V",
+  "batteryChargeCurrent": "Prąd ładowania baterii: {value}A",
+  "pvVoltage": "Napięcie panelu słonecznego (PV): {value}V",
+  "pvPower": "Moc panelu słonecznego (PV): {value}W",
+  "change": "Zmień",
+  "dataFetchSuccess": "Pomyślnie pobrano dane",
+  "dataFetchFailure": "Nie udało się pobrać danych",
+  "dataSendSuccess": "Pomyślnie wysłano dane",
+  "dataSendFailure": "Nie udało się wysłać danych",
+  "save": "Zapisz",
+  "targetAzimuth": "Docelowy Azymut",
+  "targetElevation": "Docelowa Elewacja",
+  "settings": "Ustawienia",
+  "changeLanguage": "Język",
+  "timezoneOffset": "Przesunięcie czasowe",
+  "sunrise": "Wschód słońca",
+  "sunset": "Zachód słońca",
+  "generalSettings": "Ustawienia ogólne",
+  "networkSettings": "Ustawienia sieci",
+  "serverAddress": "Adres serwera",
+  "installationNumber": "Numer instalacji",
+  "actuators": "Aktuatory",
+  "actuatorFrequency": "Częstotliwość aktuatora",
+  "changeActuatorFrequency": "Zmiana częstotliwości aktywacji",
+  "changeCoordinates": "Zmiana współrzędnych",
+  "changeAngles": "Zmiana kątów"
+}
+
+
+
+
+
+
+
+
+
+
